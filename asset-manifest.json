@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/BugTracker-Blockchain/static/css/main.c6627bf0.chunk.css",
+    "main.js": "/BugTracker-Blockchain/static/js/main.6d5dfb94.chunk.js",
+    "main.js.map": "/BugTracker-Blockchain/static/js/main.6d5dfb94.chunk.js.map",
+    "runtime-main.js": "/BugTracker-Blockchain/static/js/runtime-main.be302d13.js",
+    "runtime-main.js.map": "/BugTracker-Blockchain/static/js/runtime-main.be302d13.js.map",
+    "static/css/2.53159467.chunk.css": "/BugTracker-Blockchain/static/css/2.53159467.chunk.css",
+    "static/js/2.d86080e3.chunk.js": "/BugTracker-Blockchain/static/js/2.d86080e3.chunk.js",
+    "static/js/2.d86080e3.chunk.js.map": "/BugTracker-Blockchain/static/js/2.d86080e3.chunk.js.map",
+    "index.html": "/BugTracker-Blockchain/index.html",
+    "precache-manifest.4593ea775ab730d944e933ac3dd88296.js": "/BugTracker-Blockchain/precache-manifest.4593ea775ab730d944e933ac3dd88296.js",
+    "service-worker.js": "/BugTracker-Blockchain/service-worker.js",
+    "static/css/2.53159467.chunk.css.map": "/BugTracker-Blockchain/static/css/2.53159467.chunk.css.map",
+    "static/css/main.c6627bf0.chunk.css.map": "/BugTracker-Blockchain/static/css/main.c6627bf0.chunk.css.map",
+    "static/js/2.d86080e3.chunk.js.LICENSE.txt": "/BugTracker-Blockchain/static/js/2.d86080e3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.be302d13.js",
+    "static/css/2.53159467.chunk.css",
+    "static/js/2.d86080e3.chunk.js",
+    "static/css/main.c6627bf0.chunk.css",
+    "static/js/main.6d5dfb94.chunk.js"
+  ]
+}
