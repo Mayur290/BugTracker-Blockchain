@@ -4,7 +4,7 @@ import axios from "axios";
 import qs from "qs";
 import SignUp from "./signup.js";
 import AuthToken from "./authToken.js";
-import { Route, BrowserRouter as Router, Link } from "react-router-dom";
+import { Route, BrowserRouter as Router, Link, Redirect } from "react-router-dom";
 // import AuthToken from "./authToken.js";
 class Login extends Component {
   constructor(props) {
@@ -38,8 +38,11 @@ class Login extends Component {
           d["username"] = response.data.username;
           // console.log(d);
           this.props.isLoggedin(true);
+          //this.props.history.push("/clientDashboard");
+          
           // console.log(this.props.value);
           AuthToken(d);
+          
         },
         (error) => {
           console.log(error);

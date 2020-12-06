@@ -2,6 +2,7 @@ import axios from "axios";
 import qs from "qs";
 
 export default function AuthToken(d) {
+  debugger;
   let data = {};
   data["username"] = d.username;
   data["password"] = d.password;
@@ -23,6 +24,9 @@ export default function AuthToken(d) {
         console.log("logged in");
         document.cookie = `Token=${response.data.token}`;
         localStorage.setItem("token", response.data.token);
+        (d.username == "89fe33e3ac004bb8b62a4e55f092a0") ?
+        ( window.location.href = '/companyDashboard') : 
+        ( window.location.href = '/clientDashboard') 
       },
       (error) => {
         console.log(error);

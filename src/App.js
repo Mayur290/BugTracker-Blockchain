@@ -4,7 +4,10 @@ import Login from "./components/login.js";
 import SignUp from "./components/signup.js";
 import ProjectAdd from "./components/projectsAdd.js";
 import Logout from "./components/logout.js";
+import clientDashboard from './clientDashboard';
+import companyDashboard from './companyDashboard/companyDashboard';
 import Home from "./components/Home";
+import ProtectedRoute from './ProtectedRoute';
 // import Header from "./components/header.js";
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
 class App extends Component {
@@ -38,27 +41,17 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <h1> Home page</h1>
+          
           <nav>
-            <ul>
-              <li>
                 <Link to="/">Home</Link>
-              </li>
-
-              {loggedIn ? (
-                <li>
+              {loggedIn ? (              
                   <Link to="/logout">Logout</Link>
-                </li>
               ) : (
-                <li>
-                  <Link to="/login">Login</Link>
-                </li>
+                 <Link to="/login">Login</Link>
               )}
-
-              <li>
                 <Link to="/project">Project</Link>
-              </li>
-            </ul>
+              
+            
           </nav>
           <Switch>
             <Route path="/signup" component={SignUp} />
@@ -72,16 +65,27 @@ class App extends Component {
               path="/logout"
               render={(props) => <Logout {...props} logout={this.logout} />}
             />
+            <ProtectedRoute exact path='/clientDashboard' component={clientDashboard} />
+            <ProtectedRoute exact path='/companyDashboard' component={companyDashboard} />
             <Route
               path="/"
               exact
               render={() => <Login isLoggedin={this.isLoggedin} />}
             />
+            <Route component={NoMatch}/>
           </Switch>
         </div>
       </Router>
     );
   }
+}
+
+function NoMatch(){
+  return(
+      <div>
+          NoMatch
+      </div>
+  )
 }
 
 export default App;
